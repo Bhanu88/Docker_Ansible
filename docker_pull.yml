@@ -1,0 +1,6 @@
+---
+- hosts: dock
+  tasks:
+  - name: Pull Ubuntu image
+    docker_image:
+      name: ubuntu

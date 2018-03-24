@@ -1,0 +1,18 @@
+---
+- hosts: dock
+  tasks:
+  - name: upload the site directory to the docker host
+    synchronize: src=/root/Docker_ansible/docker_apache dest=/root
+    register: sync_result
+  - name: Build apache2 image
+    docker_image:
+      path: ./docker_apache
+      name: bhanu/my-apache
+      tag: 0.1
+      push: yes
+  - name: Create apache2 container
+    docker_container:
+      name: bhanu_apache2
+      image: bhanu/my-apache:0.1
+      ports:
+      - "80:80"

@@ -17,4 +17,8 @@ ansible-playbook docker_build.yml
 Demo for git flow
 
 feat 1
-feat 2 
+feat 2
+
+fix 1
+fix2
+ 

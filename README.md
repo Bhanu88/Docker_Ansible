@@ -15,3 +15,10 @@ image then pushing it in the repo and then creating a docker container with buil
 ansible-playbook docker_build.yml
 
 Demo for git flow
+
+feat 1
+feat 2
+
+fix 1
+fix2
+ 
